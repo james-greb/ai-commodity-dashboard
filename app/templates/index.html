@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Commodity Prices Dashboard</title>
+  </head>
+  <body>
+    <h1>Real-Time Commodity Prices</h1>
+    
+    <table>
+      <tr>
+        <th>Symbol</th>
+        <th>Price</th>
+      </tr>
+      {% for symbol, price in prices.items() %}
+      <tr>
+        <td>{{ symbol }}</td>
+        <td>{{ price }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
