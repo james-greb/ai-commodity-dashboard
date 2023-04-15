@@ -10,6 +10,6 @@ def index():
     
     for symbol in symbols:
         data = yf.Ticker(symbol).info
-        prices[symbol] = data['regularMarketPrice']
+        prices[symbol] = data['regularMarketOpen']
     
     return render_template('index.html', prices=prices)
